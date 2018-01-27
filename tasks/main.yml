@@ -1,0 +1,18 @@
+---
+# tasks file for php
+- name: install software
+  package:
+    name: "{{ item }}"
+  with_items:
+    - "{{ php_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(php_packages[ansible_distribution]
+      | default(php_packages['default'] )) }}"
+
+- name: configure php
+  ini_file:
+    path: /etc/php.ini
+    section: "{{ item.value.section }}"
+    option: "{{ item.key }}"
+    value: "{{ item.value.value }}"
+  with_dict:
+    - php_settings

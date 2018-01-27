@@ -1,0 +1,16 @@
+---
+# defaults file for php
+
+# Alpine has both php5 and php7. Select the desired version here.
+php_alpine_version: 7
+
+php_settings:
+  date.timezone:
+    section: Date
+    value: Europe/Amsterdam
+  max_input_time:
+    section: PHP
+    value: 60
+  memory_limit:
+    section: PHP
+    value: 128M

@@ -1,0 +1,13 @@
+---
+# vars file for php
+php_packages:
+  Alpine:
+    - "php{{ php_alpine_version }}"
+  Debian-7:
+    - php5
+  Debian-8:
+    - php5
+  Ubuntu-14:
+    - php5
+  default:
+    - php
