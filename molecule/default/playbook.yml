@@ -14,7 +14,7 @@
 
     - name: test /tmp/phpinfo.php
       command: php phpinfo.php
-      changed_when: "no"
+      changed_when: false
       register: output
 
     - name: show output
