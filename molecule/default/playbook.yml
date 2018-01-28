@@ -5,3 +5,12 @@
 
   roles:
     - role: ansible-role-php
+
+  tasks:
+    - name: place phpinfo.php
+      copy:
+        content: "<?php phpinfo(); ?>"
+        dest: phpinfo.php
+    - name: test phpinfo.php
+      command: php phpinfo.php
+      changed_when: "no"
