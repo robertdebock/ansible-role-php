@@ -13,7 +13,7 @@
         dest: /tmp/phpinfo.php
 
     - name: test /tmp/phpinfo.php
-      command: php phpinfo.php
+      command: php /tmp/phpinfo.php
       changed_when: false
       register: output
 
