@@ -14,5 +14,4 @@
     section: "{{ item.value.section }}"
     option: "{{ item.key }}"
     value: "{{ item.value.value }}"
-  with_dict:
-    - php_settings
+  with_dict: "{{ php_settings }}"
