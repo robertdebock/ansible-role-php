@@ -10,7 +10,13 @@
     - name: place phpinfo.php
       copy:
         content: "<?php phpinfo(); ?>"
-        dest: phpinfo.php
-    - name: test phpinfo.php
+        dest: /tmp/phpinfo.php
+
+    - name: test /tmp/phpinfo.php
       command: php phpinfo.php
       changed_when: "no"
+      register: output
+
+    - name: show output
+      debug:
+        var: output
