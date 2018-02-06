@@ -50,9 +50,6 @@ php_settings:
   track_errors:
     section: PHP
     value: "Off"
-  url_rewriter.tags:
-    section: PHP
-    value: "a=href,area=href,frame=src,input=src,form=fakeentry"
   variables_order:
     section: PHP
     value: GPCS
