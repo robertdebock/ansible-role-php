@@ -9,5 +9,8 @@ php_packages:
     - php5
   Ubuntu-14:
     - php5
+  Ubuntu-16:
+    - php
+    - libapache2-mod-php
   default:
     - php
