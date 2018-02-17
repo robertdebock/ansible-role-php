@@ -10,7 +10,9 @@
 
 - name: configure php
   ini_file:
-    dest: /etc/php.ini
+    dest: "{{ php_ini_location[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
+      | default(php_ini_location[ansible_distribution]
+      | default(php_ini_location['default'] )) }}"
     section: "{{ item.value.section }}"
     option: "{{ item.key }}"
     value: "{{ item.value.value }}"

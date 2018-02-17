@@ -14,3 +14,7 @@ php_packages:
     - libapache2-mod-php
   default:
     - php
+
+php_ini_location:
+  Ubuntu-16: /etc/php/7.0/apache2/php.ini
+  default: /etc/php.ini
