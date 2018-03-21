@@ -10,4 +10,3 @@
     - "{{ php_httpd_service[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
       | default(php_httpd_service[ansible_distribution]
       | default(php_httpd_service['default'] )) }}"
-
