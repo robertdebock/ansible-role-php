@@ -17,3 +17,5 @@
     option: "{{ item.key }}"
     value: "{{ item.value.value }}"
   with_dict: "{{ php_settings }}"
+  notify:
+    - restart httpd
