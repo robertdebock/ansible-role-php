@@ -1,8 +1,7 @@
 ---
 - name: Converge
   hosts: all
-  gather_facts: False
-  strategy: free
+  gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
