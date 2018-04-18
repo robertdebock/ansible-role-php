@@ -19,3 +19,5 @@
   with_dict: "{{ php_settings }}"
   notify:
     - restart httpd
+  loop_control:
+    label: "{{ item.key }}"
