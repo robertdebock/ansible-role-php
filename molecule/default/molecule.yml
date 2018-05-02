@@ -34,10 +34,10 @@ platforms:
     image: fedora:24
   - name: php-fedora-25
     image: fedora:25
-  - name: php-fedora-26
-    image: fedora:26
   - name: php-fedora-27
     image: fedora:27
+  - name: php-fedora-28
+    image: fedora:28
   - name: php-opensuse-42.2
     image: opensuse:42.2
   - name: php-opensuse-42.3
