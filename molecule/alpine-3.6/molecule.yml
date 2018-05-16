@@ -1,8 +1,6 @@
 ---
 dependency:
   name: galaxy
-  options:
-    role-file: requirements.yml
 driver:
   name: docker
 lint:
@@ -16,19 +14,6 @@ provisioner:
     name: ansible-lint
 scenario:
   name: alpine-3.6
-  test_sequence:
-    - lint
-    - destroy
-    - dependency
-    - syntax
-    - create
-    - prepare
-    - converge
-    - idempotence
-    - check
-    - side_effect
-    - verify
-    - destroy
 verifier:
   name: goss
   lint:
