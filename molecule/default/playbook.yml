@@ -1,23 +1,10 @@
 ---
 - name: Converge
   hosts: all
+  become: true
   gather_facts: false
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.httpd
     - role: ansible-role-php
-
-  tasks:
-    - name: place phpinfo.php
-      copy:
-        content: "<?php phpinfo(); ?>"
-        dest: /tmp/phpinfo.php
-
-    - name: test /tmp/phpinfo.php
-      command: php /tmp/phpinfo.php
-      changed_when: false
-      register: output
-
-    - name: show output
-      debug:
-        var: output

@@ -6,4 +6,5 @@
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.httpd
     - role: ansible-role-php
