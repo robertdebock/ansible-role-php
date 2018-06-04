@@ -1,2 +1,8 @@
 ---
 - robertdebock.bootstrap
+- robertdebock.buildtools
+- robertdebock.epel
+- robertdebock.httpd
+- robertdebock.python-pip
+- robertdebock.scl
+- robertdebock.update
