@@ -124,6 +124,11 @@ Example Playbook
 
   roles:
     - role: robertdebock.bootstrap
+    - role: robertdebock.epel
+    - role: robertdebock.scl
+    - role: robertdebock.buildtools
+    - role: robertdebock.python-pip
+    - role: robertdebock.httpd
     - role: robertdebock.php
 ```
 
