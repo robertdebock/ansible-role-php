@@ -14,8 +14,3 @@ php_packages:
 php_ini_location:
   Ubuntu-16: /etc/php/7.0/apache2/php.ini
   default: /etc/php.ini
-
-# php_httpd_service:
-#   Debian: apache2
-#   default: httpd
-#   Ubuntu: apache2
