@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: php-debian-stretch
-    image: debian:stretch
+  - name: php-ubuntu-latest
+    image: ubuntu:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: debian-stretch
+  name: ubuntu-latest
 verifier:
   name: goss
   lint:
