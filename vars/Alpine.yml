@@ -1,0 +1,4 @@
+---
+# vars file for php
+php_packages:
+  - "php{{ php_alpine_version }}"

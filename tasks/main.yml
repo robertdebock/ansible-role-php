@@ -1,18 +1,24 @@
 ---
 # tasks file for php
+- name: load default variables
+  include_vars:
+    file: default.yml
+
+- name: load os-specific variables
+  include_vars: "{{ item }}"
+  with_first_found:
+    - "{{ ansible_distribution }}.yml"
+    - default.yml
+
 - name: install software
   package:
     name: "{{ item }}"
   with_items:
-    - "{{ php_packages[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-      | default(php_packages[ansible_distribution]
-      | default(php_packages['default'] )) }}"
+    - "{{ php_packages }}"
 
 - name: configure php
   ini_file:
-    dest: "{{ php_ini_location[ansible_distribution ~ '-' ~ ansible_distribution_major_version]
-      | default(php_ini_location[ansible_distribution]
-      | default(php_ini_location['default'] )) }}"
+    dest: "{{ php_ini_location }}"
     section: "{{ item.value.section }}"
     option: "{{ item.key }}"
     value: "{{ item.value.value }}"
