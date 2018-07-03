@@ -8,6 +8,6 @@
     - role: robertdebock.bootstrap
     - role: robertdebock.update
     - role: robertdebock.buildtools
-    - role: robertdebock.python-pip
+    - role: robertdebock.python_pip
     - role: robertdebock.httpd
     - role: ansible-role-php
