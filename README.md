@@ -20,6 +20,8 @@ Access to a repository containing packages, likely on the internet.
 Role Variables
 --------------
 
+- php_alpine_version: For alpine, use PHP 5 or 7.
+
 Many can be set, for example:
 ```
 php_settings:
