@@ -88,6 +88,11 @@ Dependencies
 You can use this role to prepare your system:
 
 - [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
+- [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools)
+- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
+- [robertdebock.httpd](https://travis-ci.org/robertdebock/ansible-role-httpd)
+- [robertdebock.python_pip](https://travis-ci.org/robertdebock/ansible-role-python_pip)
+
 
 Download the dependencies by issuing this command:
 ```
