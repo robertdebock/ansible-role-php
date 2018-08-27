@@ -3,4 +3,5 @@
 - robertdebock.buildtools
 - robertdebock.epel
 - robertdebock.httpd
+- robertdebock.scl
 - robertdebock.python_pip

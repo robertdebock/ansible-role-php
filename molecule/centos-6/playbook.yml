@@ -6,8 +6,7 @@
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.buildtools
+    - role: robertdebock.scl
     - role: robertdebock.python_pip
     - role: robertdebock.httpd
     - role: ansible-role-php

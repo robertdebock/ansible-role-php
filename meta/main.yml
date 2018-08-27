@@ -14,10 +14,6 @@ galaxy_info:
     - name: ArchLinux
       version:
         - all
-    - name: CentOS
-      version:
-        - 6
-        - 7
     - name: Debian
       versions:
         - all
@@ -37,14 +33,15 @@ galaxy_info:
         - bionic
 
   galaxy_tags:
-    - php
-    - installer
-    - package
     - alpine
     - centos
     - debian
     - fedora
+    - installer
+    - opensuse
+    - package
+    - php
     - rhel
     - ubuntu
-
+    - web
 dependencies: []
