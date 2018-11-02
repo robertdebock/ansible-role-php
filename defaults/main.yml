@@ -4,6 +4,7 @@
 # Alpine has both php5 and php7. Select the desired version here.
 php_alpine_version: 7
 
+# All the settings for PHP.
 php_settings:
   display_errors:
     section: PHP

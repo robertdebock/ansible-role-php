@@ -3,38 +3,41 @@ php
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-php.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-php)
 
-Provides PHP for your system.
+Installs PHP on your system and allows configuration of PHP.
 
-[Unit tests](https://travis-ci.org/robertdebock/ansible-role-php) are done on every commit and periodically.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-php/issues)
+Example Playbook
+----------------
 
-To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
+This example is taken from `molecule/default/playbook.yml`:
 ```
-pip install molecule
-molecule test
+---
+- name: Converge
+  hosts: all
+  become: true
+  gather_facts: false
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.epel
+    - robertdebock.python_pip
+    - robertdebock.httpd
+    - robertdebock.php
+
 ```
-There are many scenarios available, please have a look in the `molecule/` directory.
-
-Context
---------
-This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
-
-Here is an overview of related roles:
-![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/php.png "Dependency")
-
-Requirements
-------------
-
-Access to a repository containing packages, likely on the internet.
 
 Role Variables
 --------------
 
-- php_alpine_version: For alpine, use PHP 5 or 7.
-
-Many can be set, for example:
+These variables are set in `defaults/main.yml`:
 ```
+---
+# defaults file for php
+
+# Alpine has both php5 and php7. Select the desired version here.
+php_alpine_version: 7
+
+# All the settings for PHP.
 php_settings:
   display_errors:
     section: PHP
@@ -93,23 +96,37 @@ php_settings:
   memory_limit:
     section: PHP
     value: 128M
+
+# To update all packages installed by this roles, set `php_package_state` to `latest`.
+php_package_state: present
+
 ```
 
-Dependencies
+Requirements
 ------------
 
-You can use this role to prepare your system:
+- Access to a repository containing packages, likely on the internet.
+- A recent version of Ansible. (Tests run on the last 3 release of Ansible.)
 
-- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
-- [robertdebock.buildtools](https://travis-ci.org/robertdebock/ansible-role-buildtools)
-- [robertdebock.epel](https://travis-ci.org/robertdebock/ansible-role-epel)
-- [robertdebock.httpd](https://travis-ci.org/robertdebock/ansible-role-httpd)
-- [robertdebock.python_pip](https://travis-ci.org/robertdebock/ansible-role-python_pip)
+The following roles can be installed to ensure all requirements are met, using `ansible-galaxy install -r requirements.yml`:
 
-Download the dependencies by issuing this command:
-```
-ansible-galaxy install --role-file requirements.yml
-```
+---
+- robertdebock.bootstrap
+- robertdebock.buildtools
+- robertdebock.epel
+- robertdebock.httpd
+- robertdebock.scl
+- robertdebock.python_pip
+
+
+Context
+-------
+
+This role is a part of many compatible roles. Have a look at [the documentation of these roles](https://robertdebock.nl/) for further information.
+
+Here is an overview of related roles:
+![dependencies](https://raw.githubusercontent.com/robertdebock/drawings/artifacts/php.png "Dependency")
+
 
 Compatibility
 -------------
@@ -136,27 +153,26 @@ This role has been tested against the following distributions and Ansible versio
 
 A single star means the build may fail, it's marked as an experimental build.
 
-Example Playbook
-----------------
+Testing
+-------
 
+[Unit tests](https://travis-ci.org/robertdebock/ansible-role-php) are done on every commit and periodically.
+
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-php/issues)
+
+To test this role locally please use [Molecule](https://github.com/metacloud/molecule):
 ```
-- hosts: servers
-
-  roles:
-    - role: robertdebock.bootstrap
-    - role: robertdebock.epel
-    - role: robertdebock.buildtools
-    - role: robertdebock.python_pip
-    - role: robertdebock.httpd
-    - role: robertdebock.php
+pip install molecule
+molecule test
 ```
+There are many specific scenarios available, please have a look in the `molecule/` directory.
 
-Install this role using `galaxy install robertdebock.php`.
 
 License
 -------
 
-Apache License, Version 2.0
+Apache-2.0
+
 
 Author Information
 ------------------

@@ -2,8 +2,7 @@
 # tasks file for php
 - name: install php
   package:
-    name: "{{ php_packages[ansible_distribution]
-          | default(php_packages['default']) }}"
+    name: "{{ php_packages }}"
     state: "{{ php_package_state }}"
 
 - name: configure php

@@ -1,0 +1,1 @@
+Installs PHP on your system and allows configuration of PHP.
