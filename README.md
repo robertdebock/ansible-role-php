@@ -3,8 +3,7 @@ php
 
 [![Build Status](https://travis-ci.org/robertdebock/ansible-role-php.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-php)
 
-Installs PHP on your system and allows configuration of PHP.
-
+The purpose of this role is to install and configure php on your system.
 
 Example Playbook
 ----------------
