@@ -38,6 +38,8 @@ platforms:
     image: ubuntu:artful
   - name: php-ubuntu-devel
     image: ubuntu:devel
+  - name: php-ubuntu-latest
+    image: ubuntu:latest
 provisioner:
   name: ansible
   lint:
