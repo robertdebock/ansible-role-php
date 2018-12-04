@@ -4,6 +4,9 @@
   package:
     name: "{{ php_packages }}"
     state: "{{ php_package_state }}"
+  register: php_install_php
+  until: php_install_php
+  retries: 3
 
 - name: configure php
   ini_file:
