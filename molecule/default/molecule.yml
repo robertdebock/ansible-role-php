@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: php-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: php-ubuntu-artful
-    image: ubuntu:artful
+  - name: php-ubuntu-latest
+    image: ubuntu:latest
+  - name: php-ubuntu-rolling
+    image: ubuntu:rolling
   - name: php-ubuntu-devel
     image: ubuntu:devel
   - name: php-ubuntu-latest

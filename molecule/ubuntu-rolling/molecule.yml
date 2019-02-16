@@ -8,8 +8,8 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: php-ubuntu-artful
-    image: ubuntu:artful
+  - name: php-ubuntu-rolling
+    image: ubuntu:rolling
 provisioner:
   name: ansible
   lint:
@@ -22,7 +22,7 @@ provisioner:
       all:
         httpd_ignore_docker: no
 scenario:
-  name: ubuntu-artful
+  name: ubuntu-rolling
 verifier:
   name: goss
   lint:
