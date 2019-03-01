@@ -7,8 +7,6 @@ _php_packages:
     - "php{{ php_alpine_version }}"
   openSUSE Leap:
     - php7
-  openSUSE Tumbleweed:
-    - php7
 
 php_packages: "{{ _php_packages[ansible_distribution] | default(_php_packages['default']) }}"
 
