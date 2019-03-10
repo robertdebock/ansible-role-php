@@ -56,7 +56,3 @@ provisioner:
         httpd_ignore_docker: no
 scenario:
   name: default
-verifier:
-  name: goss
-  lint:
-    name: yamllint

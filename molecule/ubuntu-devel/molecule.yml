@@ -23,7 +23,3 @@ provisioner:
         httpd_ignore_docker: no
 scenario:
   name: ubuntu-devel
-verifier:
-  name: goss
-  lint:
-    name: yamllint
