@@ -3,7 +3,7 @@
 - name: install php
   package:
     name: "{{ php_packages }}"
-    state: "{{ php_package_state }}"
+    state: present
   register: php_install_php
   until: php_install_php
   retries: 3

@@ -22,7 +22,6 @@ This example is taken from `molecule/default/playbook.yml`:
     - robertdebock.python_pip
     - robertdebock.httpd
     - robertdebock.php
-
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
@@ -97,10 +96,6 @@ php_settings:
   memory_limit:
     section: PHP
     value: 128M
-
-# To update all packages installed by this roles, set `php_package_state` to `latest`.
-php_package_state: present
-
 ```
 
 Requirements
