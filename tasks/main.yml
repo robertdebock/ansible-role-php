@@ -5,7 +5,7 @@
     name: "{{ php_packages }}"
     state: present
   register: php_install_php
-  until: php_install_php
+  until: php_install_php is succeeded
   retries: 3
 
 - name: configure php
