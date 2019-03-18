@@ -1,11 +1,11 @@
 ---
-- name: Converge
+- name: Prepare
   hosts: all
-  become: true
-  gather_facts: false
+  become: yes
+  gather_facts: no
 
   roles:
     - robertdebock.bootstrap
+    - robertdebock.epel
     - robertdebock.python_pip
     - robertdebock.httpd
-    - ansible-role-php
