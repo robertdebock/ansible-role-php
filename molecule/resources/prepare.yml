@@ -8,3 +8,5 @@
     - robertdebock.bootstrap
     - robertdebock.epel
     - robertdebock.python_pip
+    - robertdebock.buildtools
+    - robertdebock.httpd
