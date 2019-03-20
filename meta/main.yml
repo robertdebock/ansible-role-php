@@ -43,4 +43,6 @@ galaxy_info:
     - rhel
     - ubuntu
     - web
-dependencies: []
+
+dependencies:
+  - robertdebock.httpd
