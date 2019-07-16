@@ -10,3 +10,4 @@
     - robertdebock.python_pip
     - robertdebock.buildtools
     - robertdebock.httpd
+    - robertdebock.remi
