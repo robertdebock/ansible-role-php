@@ -31,12 +31,14 @@ The machine you are running this on, may need to be prepared.
   gather_facts: no
 
   roles:
-    - robertdebock.bootstrap
-    - robertdebock.epel
-    - robertdebock.python_pip
-    - robertdebock.buildtools
-    - robertdebock.httpd
-    - robertdebock.remi
+    - role: robertdebock.bootstrap
+    - role: robertdebock.epel
+    - role: robertdebock.python_pip
+    - role: robertdebock.buildtools
+    - role: robertdebock.httpd
+    - role: robertdebock.remi
+      remi_enabled_repositories:
+        - php74
 ```
 
 Also see a [full explanation and example](https://robertdebock.nl/how-to-use-these-roles.html) on how to use these roles.
