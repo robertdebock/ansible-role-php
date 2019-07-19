@@ -12,4 +12,4 @@
     - role: robertdebock.httpd
     - role: robertdebock.remi
       remi_enabled_repositories:
-        - php74
+        - php73
