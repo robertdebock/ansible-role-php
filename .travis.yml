@@ -12,15 +12,12 @@ env:
     namespace="robertdebock"
   matrix:
     # - namespace="archlinux" image="base"
-    - image="debian" tag="stable"
     - image="debian" tag="unstable"
     - image="debian"
     - image="centos"
     - image="fedora"
     - image="fedora" tag="rawhide"
     - image="opensuse"
-    - image="ubuntu" tag="rolling"
-    - image="ubuntu" tag="devel"
     - image="ubuntu"
 
 matrix:
