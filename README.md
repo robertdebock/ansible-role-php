@@ -176,7 +176,6 @@ Some variarations of the build matrix do not work. These are the variations and 
 | Alpine | ImportError: Error loading shared library /tmp/pip-build-env-zrX8Lu/lib/python2.7/site-packages/_cffi_backend.so: Operation not permitted |
 
 
-
 Testing
 -------
 
