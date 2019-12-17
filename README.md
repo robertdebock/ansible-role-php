@@ -36,9 +36,6 @@ The machine you are running this on, may need to be prepared, I use this playboo
     - role: robertdebock.python_pip
     - role: robertdebock.buildtools
     - role: robertdebock.httpd
-    - role: robertdebock.remi
-      remi_enabled_repositories:
-        - php73
 ```
 
 
@@ -132,7 +129,6 @@ The following roles can be installed to ensure all requirements are met, using `
 - robertdebock.httpd
 - robertdebock.scl
 - robertdebock.python_pip
-- robertdebock.remi
 
 ```
 
