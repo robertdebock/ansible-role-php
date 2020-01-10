@@ -5,8 +5,6 @@ _php_packages:
     - php
   Alpine:
     - "php{{ php_alpine_version }}"
-  CentOS-7:
-    - php
   openSUSE Leap:
     - php7
 
