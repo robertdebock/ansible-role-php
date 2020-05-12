@@ -38,4 +38,5 @@ galaxy_info:
     - php
     - web
 
-dependencies:   - robertdebock.httpd
+dependencies:
+  - robertdebock.httpd
