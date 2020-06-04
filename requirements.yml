@@ -3,5 +3,6 @@
 - robertdebock.buildtools
 - robertdebock.epel
 - robertdebock.httpd
-- robertdebock.scl
+- robertdebock.openssl
 - robertdebock.python_pip
+- robertdebock.scl
