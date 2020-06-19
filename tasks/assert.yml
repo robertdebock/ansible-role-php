@@ -1,0 +1,15 @@
+---
+- name: test if php_alpine_version is set correctly
+  assert:
+    that:
+      - php_alpine_version is defined
+      - php_alpine_version | int
+      - php_alpine_version in [5, 7]
+  when:
+    - ansible_os_family == "Alpine"
+
+- name: test if php_settings is set correctly
+  assert:
+    that:
+      - php_settings is defined
+      - php_settings | length > 0
