@@ -5,6 +5,7 @@
       - php_alpine_version is defined
       - php_alpine_version | int
       - php_alpine_version in [5, 7]
+    quiet: yes
   when:
     - ansible_os_family == "Alpine"
 
@@ -13,3 +14,4 @@
     that:
       - php_settings is defined
       - php_settings | length > 0
+    quiet: yes
