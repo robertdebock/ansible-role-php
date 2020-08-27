@@ -14,6 +14,7 @@
     section: "{{ item.value.section }}"
     option: "{{ item.key }}"
     value: "{{ item.value.value }}"
+    mode: "0644"
   with_dict: "{{ php_settings }}"
   notify:
     - restart httpd
