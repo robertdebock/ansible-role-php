@@ -96,7 +96,7 @@
   assert:
     that:
       - php_session_hash_bits_per_character is defined
-      - php_session_hash_bits_per_character | type_debug == "bool"
+      - php_session_hash_bits_per_character | int
     quiet: yes
 
 - name: test if php_short_open_tag is set correctly
