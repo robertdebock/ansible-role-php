@@ -70,10 +70,10 @@ php_alpine_version: 7
 php_display_errors: no
 php_startup_errors: no
 php_error_reporting: no
-php_html_errors: yes # or a string.
+php_html_errors: yes
 php_log_errors: yes
 php_max_input_time: 60
-php_output_buffering: 4096 # or a boolean of no.
+php_output_buffering: 4096
 php_register_argc_argv: no
 php_request_order: GP
 php_session_bug_compat_42: no

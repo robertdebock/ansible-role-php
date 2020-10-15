@@ -140,3 +140,25 @@
       - php_memory_limit is defined
       - php_memory_limit | length > 0
     quiet: yes
+
+- name: test if php_upload_max_filesize is set correctly
+  assert:
+    that:
+      - php_upload_max_filesize is defined
+      - php_upload_max_filesize | length > 0
+    quiet: yes
+
+- name: test if php_post_max_size is set correctly
+  assert:
+    that:
+      - php_post_max_size is defined
+      - php_post_max_size | length > 0
+    quiet: yes
+
+- name: test if php_extensions is set correctly
+  assert:
+    that:
+      - php_extensions is iterable
+    quiet: yes
+  when:
+      - php_extensions is defined
