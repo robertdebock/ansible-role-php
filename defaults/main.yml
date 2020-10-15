@@ -24,3 +24,7 @@ php_variables_order: GPCS
 php_engine: yes
 php_date_timezone: Europe/Amsterdam
 php_memory_limit: 128M
+php_upload_max_filesize: 2M
+php_post_max_size: 8M
+# php_extensions:
+#   - mcrypt.so
