@@ -10,14 +10,9 @@
     state: present
 
 - name: configure php
-  ini_file:
+  template:
+    src: php.ini.j2
     dest: "{{ php_ini_location }}"
-    section: "{{ item.value.section }}"
-    option: "{{ item.key }}"
-    value: "{{ item.value.value }}"
     mode: "0644"
-  with_dict: "{{ php_settings }}"
   notify:
     - restart httpd
-  loop_control:
-    label: "{{ item.key }}"

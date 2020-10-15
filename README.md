@@ -67,64 +67,25 @@ These variables are set in `defaults/main.yml`:
 php_alpine_version: 7
 
 # All the settings for PHP.
-php_settings:
-  display_errors:
-    section: PHP
-    value: "Off"
-  display_startup_errors:
-    section: PHP
-    value: "Off"
-  error_reporting:
-    section: PHP
-    value: "Off"
-  html_errors:
-    section: PHP
-    value: "On"
-  log_errors:
-    section: PHP
-    value: "On"
-  max_input_time:
-    section: PHP
-    value: 60
-  output_buffering:
-    section: PHP
-    value: 4096
-  register_argc_argv:
-    section: PHP
-    value: "Off"
-  request_order:
-    section: PHP
-    value: GP
-  session.bug_compat_42:
-    section: PHP
-    value: "Off"
-  session.bug_compat_warn:
-    section: PHP
-    value: "Off"
-  session.gc_divisor:
-    section: PHP
-    value: 1000
-  session.hash_bits_per_character:
-    section: PHP
-    value: 5
-  short_open_tag:
-    section: PHP
-    value: "Off"
-  track_errors:
-    section: PHP
-    value: "Off"
-  variables_order:
-    section: PHP
-    value: GPCS
-  Engine:
-    section: PHP
-    value: "On"
-  date.timezone:
-    section: Date
-    value: Europe/Amsterdam
-  memory_limit:
-    section: PHP
-    value: 128M
+php_display_errors: no
+php_startup_errors: no
+php_error_reporting: no
+php_html_errors: yes # or a string.
+php_log_errors: yes
+php_max_input_time: 60
+php_output_buffering: 4096 # or a boolean of no.
+php_register_argc_argv: no
+php_request_order: GP
+php_session_bug_compat_42: no
+php_session_bug_compat_warn: no
+php_session_gc_divisor: 1000
+php_session_hash_bits_per_character: 5
+php_short_open_tag: no
+php_track_errors: no
+php_variables_order: GPCS
+php_engine: yes
+php_date_timezone: Europe/Amsterdam
+php_memory_limit: 128M
 ```
 
 ## [Requirements](#requirements)
