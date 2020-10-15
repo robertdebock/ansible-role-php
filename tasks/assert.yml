@@ -161,4 +161,4 @@
       - php_extensions is iterable
     quiet: yes
   when:
-      - php_extensions is defined
+    - php_extensions is defined
