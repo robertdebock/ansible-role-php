@@ -34,7 +34,7 @@
   assert:
     that:
       - php_display_errors is defined
-      - php_display_errors | length > 0
+      - php_display_errors | type_debug == "bool"
     quiet: yes
 
 - name: test if php_log_errors is set correctly
