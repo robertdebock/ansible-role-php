@@ -4,7 +4,7 @@
     that:
       - php_alpine_version is defined
       - php_alpine_version | int
-      - php_alpine_version in [5, 7]
+      - php_alpine_version in [ 5, 7 ]
     quiet: yes
   when:
     - ansible_os_family == "Alpine"
