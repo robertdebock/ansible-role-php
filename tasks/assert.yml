@@ -3,7 +3,7 @@
   assert:
     that:
       - php_alpine_version is defined
-      - php_alpine_version | int
+      - php_alpine_version is number
       - php_alpine_version in [ 5, 7 ]
     quiet: yes
   when:
@@ -48,14 +48,14 @@
   assert:
     that:
       - php_max_input_time is defined
-      - php_max_input_time | int
+      - php_max_input_time is number
     quiet: yes
 
 - name: test if php_output_buffering is set correctly
   assert:
     that:
       - php_output_buffering is defined
-      - php_output_buffering | type_debug == "bool" or php_output_buffering | int
+      - php_output_buffering | type_debug == "bool" or php_output_buffering is number
     quiet: yes
 
 - name: test if php_register_argc_argv is set correctly
@@ -89,14 +89,14 @@
   assert:
     that:
       - php_session_gc_divisor is defined
-      - php_session_gc_divisor | int
+      - php_session_gc_divisor is number
     quiet: yes
 
 - name: test if php_session_hash_bits_per_character is set correctly
   assert:
     that:
       - php_session_hash_bits_per_character is defined
-      - php_session_hash_bits_per_character | int
+      - php_session_hash_bits_per_character is number
     quiet: yes
 
 - name: test if php_short_open_tag is set correctly
