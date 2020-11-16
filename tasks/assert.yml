@@ -13,35 +13,35 @@
   assert:
     that:
       - php_display_errors is defined
-      - php_display_errors | type_debug == "bool"
+      - php_display_errors is boolean
     quiet: yes
 
 - name: test if php_startup_errors is set correctly
   assert:
     that:
       - php_startup_errors is defined
-      - php_startup_errors | type_debug == "bool"
+      - php_startup_errors is boolean
     quiet: yes
 
 - name: test if php_error_reporting is set correctly
   assert:
     that:
       - php_error_reporting is defined
-      - php_error_reporting | type_debug == "bool"
+      - php_error_reporting is boolean
     quiet: yes
 
 - name: test if php_html_errors is set correctly
   assert:
     that:
       - php_display_errors is defined
-      - php_display_errors | type_debug == "bool"
+      - php_display_errors is boolean
     quiet: yes
 
 - name: test if php_log_errors is set correctly
   assert:
     that:
       - php_log_errors is defined
-      - php_log_errors | type_debug == "bool"
+      - php_log_errors is boolean
     quiet: yes
 
 - name: test if php_max_input_time is set correctly
@@ -55,14 +55,14 @@
   assert:
     that:
       - php_output_buffering is defined
-      - php_output_buffering | type_debug == "bool" or php_output_buffering is number
+      - php_output_buffering is boolean or php_output_buffering is number
     quiet: yes
 
 - name: test if php_register_argc_argv is set correctly
   assert:
     that:
       - php_register_argc_argv is defined
-      - php_register_argc_argv | type_debug == "bool"
+      - php_register_argc_argv is boolean
     quiet: yes
 
 - name: test if php_request_order is set correctly
@@ -75,14 +75,14 @@
   assert:
     that:
       - php_session_bug_compat_42 is defined
-      - php_session_bug_compat_42 | type_debug == "bool"
+      - php_session_bug_compat_42 is boolean
     quiet: yes
 
 - name: test if php_session_bug_compat_warn is set correctly
   assert:
     that:
       - php_session_bug_compat_warn is defined
-      - php_session_bug_compat_warn | type_debug == "bool"
+      - php_session_bug_compat_warn is boolean
     quiet: yes
 
 - name: test if php_session_gc_divisor is set correctly
@@ -103,14 +103,14 @@
   assert:
     that:
       - php_short_open_tag is defined
-      - php_short_open_tag | type_debug == "bool"
+      - php_short_open_tag is boolean
     quiet: yes
 
 - name: test if php_track_errors is set correctly
   assert:
     that:
       - php_track_errors is defined
-      - php_track_errors | type_debug == "bool"
+      - php_track_errors is boolean
     quiet: yes
 
 - name: test if php_variables_order is set correctly
@@ -124,7 +124,7 @@
   assert:
     that:
       - php_engine is defined
-      - php_engine | type_debug == "bool"
+      - php_engine is boolean
     quiet: yes
 
 - name: test if php_date_timezone is set correctly
