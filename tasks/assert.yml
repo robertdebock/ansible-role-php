@@ -117,7 +117,6 @@
   assert:
     that:
       - php_variables_order is defined
-      - php_variables_order | length > 0
     quiet: yes
 
 - name: test if php_engine is set correctly
@@ -131,28 +130,24 @@
   assert:
     that:
       - php_date_timezone is defined
-      - php_date_timezone | length > 0
     quiet: yes
 
 - name: test if php_memory_limit is set correctly
   assert:
     that:
       - php_memory_limit is defined
-      - php_memory_limit | length > 0
     quiet: yes
 
 - name: test if php_upload_max_filesize is set correctly
   assert:
     that:
       - php_upload_max_filesize is defined
-      - php_upload_max_filesize | length > 0
     quiet: yes
 
 - name: test if php_post_max_size is set correctly
   assert:
     that:
       - php_post_max_size is defined
-      - php_post_max_size | length > 0
     quiet: yes
 
 - name: test if php_extensions is set correctly
