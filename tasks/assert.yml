@@ -1,4 +1,5 @@
 ---
+
 - name: test if php_alpine_version is set correctly
   assert:
     that:
