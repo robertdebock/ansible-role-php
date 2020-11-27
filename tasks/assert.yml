@@ -70,6 +70,7 @@
   assert:
     that:
       - php_request_order is defined
+      - php_request_order is string
     quiet: yes
 
 - name: test if php_session_bug_compat_42 is set correctly
@@ -118,6 +119,7 @@
   assert:
     that:
       - php_variables_order is defined
+      - php_variables_order is string
     quiet: yes
 
 - name: test if php_engine is set correctly
@@ -131,24 +133,28 @@
   assert:
     that:
       - php_date_timezone is defined
+      - php_date_timezone is string
     quiet: yes
 
 - name: test if php_memory_limit is set correctly
   assert:
     that:
       - php_memory_limit is defined
+      - php_memory_limit is string
     quiet: yes
 
 - name: test if php_upload_max_filesize is set correctly
   assert:
     that:
       - php_upload_max_filesize is defined
+      - php_upload_max_filesize is string
     quiet: yes
 
 - name: test if php_post_max_size is set correctly
   assert:
     that:
       - php_post_max_size is defined
+      - php_post_max_size is string
     quiet: yes
 
 - name: test if php_extensions is set correctly
