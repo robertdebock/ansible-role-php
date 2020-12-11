@@ -2,9 +2,9 @@
 
 Install and configure php on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-php.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-php)|[![github](https://github.com/robertdebock/ansible-role-php/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-php/actions)|[![quality](https://img.shields.io/ansible/quality/23465)](https://galaxy.ansible.com/robertdebock/php)|[![downloads](https://img.shields.io/ansible/role/d/23465)](https://galaxy.ansible.com/robertdebock/php)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-php.svg)](https://github.com/robertdebock/ansible-role-php/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-php.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-php)|[![github](https://github.com/robertdebock/ansible-role-php/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-php/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-php/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-php)|[![quality](https://img.shields.io/ansible/quality/23465)](https://galaxy.ansible.com/robertdebock/php)|[![downloads](https://img.shields.io/ansible/role/d/23465)](https://galaxy.ansible.com/robertdebock/php)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-php.svg)](https://github.com/robertdebock/ansible-role-php/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -81,10 +81,11 @@ php_post_max_size: 8M
 
 ## [Requirements](#requirements)
 
-- Access to a repository containing packages, likely on the internet.
-- A recent version of Ansible. (Tests run on the current, previous and next release of Ansible.)
+- pip packages listed in [requirements.txt](https://github.com/robertdebock/ansible-role-php/blob/master/requirements.txt).
 
 ## [Status of requirements](#status-of-requirements)
+
+The following roles are used to prepare a system. You may choose to prepare your system in another way, I have tested these roles as well.
 
 | Requirement | Travis | GitHub |
 |-------------|--------|--------|
