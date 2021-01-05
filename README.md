@@ -63,7 +63,6 @@ php_max_input_time: 60
 php_output_buffering: 4096
 php_register_argc_argv: no
 php_request_order: GP
-php_session_bug_compat_42: no
 php_session_bug_compat_warn: no
 php_session_gc_divisor: 1000
 php_session_hash_bits_per_character: 5
@@ -174,10 +173,6 @@ image="debian" tag="stable" tox
 ## [License](#license)
 
 Apache-2.0
-
-## [Contributors](#contributors)
-
-I'd like to thank everybody that made contributions to this repository. It motivates me, improves the code and is just fun to collaborate.
 
 
 ## [Author Information](#author-information)
