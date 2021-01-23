@@ -10,10 +10,3 @@ _php_packages:
     - php7
 
 php_packages: "{{ _php_packages[ansible_distribution] | default(_php_packages['default']) }}"
-
-_php_ini_location:
-  default: /etc/php.ini
-  Ubuntu-18: /etc/php/7.2/cli/php.ini
-  Ubuntu-20: /etc/php/7.4/cli/php.ini
-
-php_ini_location: "{{ _php_ini_location[ansible_distribution ~ '-' ~ ansible_distribution_major_version] | default(_php_ini_location['default']) }}"

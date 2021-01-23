@@ -11,10 +11,15 @@
     name: "{{ php_packages }}"
     state: present
 
+- name: find used php.ini
+  command: php --ini | grep 'Loaded Configuration File' | awk '{ print $NF }'
+  register: php_ini_location
+  changed_when: no
+
 - name: configure php
   template:
     src: php.ini.j2
-    dest: "{{ php_ini_location }}"
+    dest: "{{ php_ini_location.stdout }}"
     mode: "0644"
   notify:
     - restart httpd
