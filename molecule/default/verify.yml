@@ -5,5 +5,10 @@
   gather_facts: no
 
   tasks:
-    - name: check if connection still works
-      ping:
+    - name: place php_info
+      copy:
+        content: "<?php phpinfo(); ?>"
+        dest: php_info.php
+
+    - name: run php php_info.php
+      command: php php_info.php

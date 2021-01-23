@@ -12,7 +12,7 @@
     state: present
 
 - name: find used php.ini
-  command: php --ini | grep 'Loaded Configuration File' | awk '{ print $NF }'
+  shell: set -o pipefail & {{ php_ini_command }}
   register: php_ini_location
   changed_when: no
 

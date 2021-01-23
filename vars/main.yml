@@ -10,3 +10,5 @@ _php_packages:
     - php7
 
 php_packages: "{{ _php_packages[ansible_distribution] | default(_php_packages['default']) }}"
+
+php_ini_command: "php --ini | grep 'Loaded Configuration File' | awk '{ print $NF }'"
