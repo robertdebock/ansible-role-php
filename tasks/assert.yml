@@ -63,7 +63,8 @@
   assert:
     that:
       - php_output_buffering is defined
-      - php_output_buffering is boolean or php_output_buffering is number
+      - php_output_buffering in [ "Off", "On" ] or
+        php_output_buffering is number
     quiet: yes
 
 - name: test if php_register_argc_argv is set correctly
