@@ -52,6 +52,13 @@
       - php_max_input_time is number
     quiet: yes
 
+- name: test if php_max_execution_time is set correctly
+  assert:
+    that:
+      - php_max_execution_time is defined
+      - php_max_execution_time is number
+    quiet: yes
+
 - name: test if php_output_buffering is set correctly
   assert:
     that:
