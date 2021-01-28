@@ -1,5 +1,13 @@
 ---
 
+- name: test if php_ini_location is set correctly
+  assert:
+    that:
+      - php_ini_location is string
+    quiet: yes
+  when:
+    - php_ini_location is defined
+
 - name: test if php_alpine_version is set correctly
   assert:
     that:

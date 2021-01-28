@@ -1,6 +1,9 @@
 ---
 # defaults file for php
 
+# The role discovers the ini location automatically, but can be overwritten.
+# php_ini_location: /etc/php/7.4/apache/php.ini
+
 # Alpine has both php5 and php7. Select the desired version here.
 php_alpine_version: 7
 

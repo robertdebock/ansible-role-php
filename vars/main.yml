@@ -11,4 +11,5 @@ _php_packages:
 
 php_packages: "{{ _php_packages[ansible_distribution] | default(_php_packages['default']) }}"
 
+# TODO: This command returns '/etc/php/7.4/cli/php.ini', instead of apache.
 php_ini_command: "php -r 'phpinfo();' | grep 'Loaded Configuration File' | awk '{ print $NF }'"
