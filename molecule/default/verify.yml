@@ -6,7 +6,7 @@
 
   tasks:
     - name: place php_info
-      copy:
+      ansible.builtin.copy:
         content: "<?php phpinfo(); ?>"
         dest: php_info.php
 
