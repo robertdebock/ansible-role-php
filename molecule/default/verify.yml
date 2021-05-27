@@ -11,4 +11,5 @@
         dest: php_info.php
 
     - name: run php php_info.php
-      command: php php_info.php
+      ansible.builtin.command:
+        cmd: php php_info.php
