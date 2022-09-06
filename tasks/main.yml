@@ -25,4 +25,4 @@
     dest: "{{ php_ini_location | default(php_found_ini_location.stdout) }}"
     mode: "0644"
   notify:
-    - restart httpd
+    - Restart httpd
