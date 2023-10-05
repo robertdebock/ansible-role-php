@@ -13,7 +13,7 @@
 
 - name: Find used php.ini
   ansible.builtin.shell:
-    cmd: set -o pipefail & {{ php_ini_command }}
+    cmd: "set -o pipefail && {{ php_ini_command }}"
   register: php_found_ini_location
   changed_when: no
   when:
