@@ -2,9 +2,9 @@
 
 Install and configure php on your system.
 
-|GitHub|GitLab|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![github](https://github.com/robertdebock/ansible-role-php/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-php/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-php/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-php)|[![quality](https://img.shields.io/ansible/quality/23465)](https://galaxy.ansible.com/robertdebock/php)|[![downloads](https://img.shields.io/ansible/role/d/23465)](https://galaxy.ansible.com/robertdebock/php)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-php.svg)](https://github.com/robertdebock/ansible-role-php/releases/)|
+|GitHub|GitLab|Downloads|Version|
+|------|------|---------|-------|
+|[![github](https://github.com/robertdebock/ansible-role-php/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-php/actions)|[![gitlab](https://gitlab.com/robertdebock-iac/ansible-role-php/badges/master/pipeline.svg)](https://gitlab.com/robertdebock-iac/ansible-role-php)|[![downloads](https://img.shields.io/ansible/role/d/24563)](https://galaxy.ansible.com/robertdebock/php)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-php.svg)](https://github.com/robertdebock/ansible-role-php/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
@@ -133,7 +133,7 @@ The minimum version of Ansible required is 2.12, tests have been done to:
 - The current version.
 - The development version.
 
-If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-php/issues)
+If you find issues, please register them in [GitHub](https://github.com/robertdebock/ansible-role-php/issues).
 
 ## [License](#license)
 
