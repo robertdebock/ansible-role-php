@@ -1,4 +1,4 @@
-# Ansible role [php](#php)
+# [Ansible role php](#php)
 
 Install and configure php on your system.
 
