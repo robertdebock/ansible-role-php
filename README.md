@@ -35,6 +35,7 @@ The machine needs to be prepared. In CI this is done using [`molecule/default/pr
     - role: robertdebock.bootstrap
     - role: robertdebock.epel
     - role: robertdebock.python_pip
+      python_pip_update: false
     - role: robertdebock.buildtools
     - role: robertdebock.openssl
       openssl_items:
