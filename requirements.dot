@@ -1,0 +1,21 @@
+digraph PhiloDilemma {
+  label = "Robert de Bock" ;
+  overlap=false
+  {
+    "php" [fillcolor=yellow style=filled penwidth=3]
+    "robertdebock.bootstrap" [fillcolor=green style=filled]
+    "robertdebock.buildtools" [fillcolor=green style=filled]
+    "robertdebock.epel" [fillcolor=green style=filled]
+    "robertdebock.httpd" [fillcolor=green style=filled]
+    "robertdebock.openssl" [fillcolor=green style=filled]
+    "robertdebock.python_pip" [fillcolor=green style=filled]
+    "robertdebock.scl" [fillcolor=green style=filled]
+  }
+  "php" -> "robertdebock.bootstrap"
+  "php" -> "robertdebock.buildtools"
+  "php" -> "robertdebock.epel"
+  "php" -> "robertdebock.httpd"
+  "php" -> "robertdebock.openssl"
+  "php" -> "robertdebock.python_pip"
+  "php" -> "robertdebock.scl"
+}
