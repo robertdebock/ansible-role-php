@@ -40,8 +40,6 @@ jobs:
           - image: "fedora"
             tag: "latest"
           - image: "ubuntu"
-            tag: "focal"
-          - image: "ubuntu"
             tag: "jammy"
     steps:
       - name: checkout
