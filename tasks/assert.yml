@@ -17,7 +17,7 @@
       - php_alpine_version in [ 5, 7 ]
     quiet: true
   when:
-    - ansible_os_family == "Alpine"
+    - ansible_facts['os_family'] == "Alpine"
 
 - name: assert | Test php_display_errors
   ansible.builtin.assert:
