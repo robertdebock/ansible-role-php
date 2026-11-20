@@ -16,7 +16,8 @@
     cmd: "set -o pipefail && {{ php_ini_command }}"
     executable: /bin/bash
   register: php_found_ini_location
-  changed_when: false
+  changed_when:
+    - false
   when:
     - php_ini_location is not defined
 
